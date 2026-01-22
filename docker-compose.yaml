@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://database-1.c4xc68mao6ez.us-east-1.rds.amazonaws.com:3306/dbsu413
+      - SPRING_DATASOURCE_URL=jdbc:mysql://database-1.c4xc68mao6ez.us-east-1.rds.amazonaws.com:3306/database1
       - SPRING_DATASOURCE_USERNAME=admin
       - SPRING_DATASOURCE_PASSWORD=Admin1234
       # FIXED: Use underscores instead of hyphens
