@@ -7,7 +7,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://database-1.c4xc68mao6ez.us-east-1.rds.amazonaws.com:3306/database1
       - SPRING_DATASOURCE_USERNAME=admin
-      - SPRING_DATASOURCE_PASSWORD=Admin1234
+      - SPRING_DATASOURCE_PASSWORD=Admin12345
       # FIXED: Use underscores instead of hyphens
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=com.mysql.cj.jdbc.Driver
       # FIXED: Hikari properties
