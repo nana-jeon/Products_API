@@ -5,7 +5,11 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://database-1.c4xc68mao6ez.us-east-1.rds.amazonaws.com:3306/dbsu413
-      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
-      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
-    restart: always
+      - SPRING_DATASOURCE_URL=jdbc:mysql://database-1.c4xc68mao6ez.us-east-1.rds.amazonaws.com:3306/dbsu413
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=Admin1234
+      - SPRING_DATASOURCE_DRIVER-CLASS-NAME=com.mysql.cj.jdbc.Driver
+      # Add connection timeout settings
+      - SPRING_DATASOURCE_HIKARI_CONNECTION_TIMEOUT=30000
+      - SPRING_DATASOURCE_HIKARI_VALIDATION_TIMEOUT=5000
+    restart: unless-stopped
